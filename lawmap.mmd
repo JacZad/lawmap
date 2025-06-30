@@ -7,42 +7,64 @@ theme: default
 
 graph TD
     %% Poziom 1: Konstytucja RP
-    konstytucja[Konstytucja RP] --> uzd
+    konstytucja[Konstytucja RP|"Konstytucja Rzeczypospolitej Polskiej z dnia 2 kwietnia 1997 r. (Dz.U. z 1997 r. Nr 78, poz. 483)"]
+    konstytucja --> uzd
     konstytucja --> rtv
-    konstytucja --> budowlane
+    konstytucja --> p_budowlane
+    konstytucja --> k_cywilny
+    konstytucja --> k_wyborczy
+    konstytucja --> k_morski
+    
 
     %% Poziom 2: Umowy Międzynarodowe / Prawo UE
-    kpon[Konwencja ONZ o Prawach Osób Niepełnosprawnych] --> uzd
+    kpon[Konwencja ONZ o Prawach Osób Niepełnosprawnych|"Konwencja o prawach osób niepełnosprawnych, sporządzona w Nowym Jorku dnia 13 grudnia 2006 r. (Dz.U. z 2012 r. poz. 1169)"]
+    kpon --> uzd
     eaa[Dyrektywa Parlamentu Europejskiego i Rady w sprawie wymogów dostępności produktów i usług]
     eaa --transpozycja--> pad
     eaa --"norma techniczna"--> en301549
     ead[Dyrektywa Parlamentu Europejskiego i Rady w sprawie dostępności stron internetowych i aplikacji mobilnych podmiotów publicznych]
     ead --transpozycja--> udc
     ead --"norma techniczna"--> en301549
-
+    ue-loty[Rozporządzenie (WE) nr 1107/2006 z dnia 5 lipca 2006 r. w sprawie praw osób niepełnosprawnych oraz osób o ograniczonej sprawności ruchowej w podróżach lotniczych]
+    ue-loty --> p_lotnicze
+    ue-autobusy[Rozporządzenie Parlamentu Europejskiego i Rady (UE) nr 181/2011 z dnia 16 lutego 2011 r. dotyczące praw pasażerów w transporcie autobusowym i autokarowym]
+    ue-autobusy --> zbiorkom
+    karta[Karta Praw Podstawowych Unii Europejskiej (Dz. Urz. UE C 303 z 14.12.2007 r.)]
+    karta --> uzd
     %% Poziom 3: Ustawy
-    uzd[Ustawa o zapewnianiu dostępności osobom ze szczególnymi potrzebami]
+k_cywilny[Ustawa z dnia 23 kwietnia 1964 r. – Kodeks cywilny (Dz.U. z 1964 r. Nr 16, poz. 93)]
+k_morski[Ustawa z dnia 18 września 2001 r. – Kodeks morski (Dz.U. z 2001 r. Nr 138, poz. 1545)]
+    k_wyborczy[Ustawa z dnia 5 stycznia 2011 r. – Kodeks wyborczy]
+    pzp[Ustawa z dnia 11 września 2019 r. – Prawo zamówień publicznych]
+    p_lotnicze[Ustawa z dnia 3 lipca 2002 r. – Prawo lotnicze]
+    p_budowlane[Ustawa z dnia 7 lipca 1994 r. – Prawo budowlane]
+    p_telekomunikacyjne[Prawo telekomunikacyjne]
+
+
+    uzd[Ustawa o zapewnianiu dostępności osobom ze szczególnymi potrzebami] "Ustawa z dnia 19 lipca 2019 r. o zapewnianiu dostępności osobom ze szczególnymi potrzebami (Dz.U. z 2019 r. poz. 1696)"
     udc[Ustawa o dostępności cyfrowej stron internetowych i aplikacji mobilnych podmiotów publicznych]
     udc --"norma techniczna"--> en301549
-    pad[Ustawa o zapewnianiu spełniania wymagań dostępności niektórych produktów i usług  przez podmioty gospodarcze]
+    pad[Ustawa o zapewnianiu spełniania wymagań dostępności niektórych produktów i usług przez podmioty gospodarcze]
+
     pad --odwołanie-->kredyt
     pad --odwołanie--> hipoteczny
     pad --odwołanie--> instrumenty
     pad --odwołanie--> uup
     pad --odwołanie--> usude
     pad --"norma techniczna"--> en301549
+    pad --delegacja--> wytyczne_pfron
     rtv[Ustawa o radiofonii i telewizji]
-    pjm[Ustawa o języku migowym i innych środkach komunikowania się ]
+    rtv --> krrit_ad
+    rtv --> krrit_cc
+    rtv --> krrit_pjm
+    pjm[Ustawa o języku migowym i innych środkach komunikowania się]
     upk[Ustawa o prawach konsumenta]
-pzp[Ustawa - Prawo zamówień publicznych]
-usude[Ustawa o świadczeniu usług drogą elektroniczną]
-morski[Ustawa Kodeks morski]
-zbiorkom[Ustawa o publicznym transporcie zbiorowym]
-kredyt[Ustawa o kredycie konsumenckim]
-hipoteczny[Ustawa o kredycie hipotecznym oraz o nadzorze nad pośrednikami kredytu hipotecznego i agentami ]
-instrumenty[Ustawa o obrocie instrumentami finansowymi]
-uup[Ustawa o usługach płatniczych]
-budowlane[Ustawa Prawo budowlane]
+    usude[Ustawa o świadczeniu usług drogą elektroniczną]
+    zbiorkom[Ustawa o publicznym transporcie zbiorowym]
+    kredyt[Ustawa o kredycie konsumenckim]
+    hipoteczny[Ustawa o kredycie hipotecznym oraz o nadzorze nad pośrednikami kredytu hipotecznego i agentami]
+    instrumenty[Ustawa o obrocie instrumentami finansowymi]
+    uup[Ustawa o usługach płatniczych]
 
 
 
@@ -53,4 +75,10 @@ budowlane[Ustawa Prawo budowlane]
     
     %% Poziom 6: Normy i standardy
     en301549[EN 301 549 V3.2.1<br>Accessibility requirements for ICT products and services]
+    wytyczne_mfipr[Wytyczne dotyczące realizacji zasad równościowych w ramach funduszy unijnych na lata 2021-2027]
+    wytyczne_pfron[Wytyczne Jak zapewnić dostępność produktów i usług]
+    krrit_ad[Rekomendacje KRRiT dotyczące audiodeskrypcji]
+    krrit_cc[Rekomendacje KRRiT dotyczące napisów dla niesłyszących]
+    krrit_pjm[Stanowisko KRRiT w sprawie tłumaczenia na polski język migowy]
+
 
