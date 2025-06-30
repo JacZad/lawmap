@@ -1,0 +1,56 @@
+---
+title: Dostępność w polskim prawie
+description: Schemat ilustrujący hierarchię aktów prawnych dotyczących dostępności.
+tags: [dostępność, prawo, akty prawne, hierarchia]
+theme: default
+---
+
+graph TD
+    %% Poziom 1: Konstytucja RP
+    konstytucja[Konstytucja RP] --> uzd
+    konstytucja --> rtv
+    konstytucja --> budowlane
+
+    %% Poziom 2: Umowy Międzynarodowe / Prawo UE
+    kpon[Konwencja ONZ o Prawach Osób Niepełnosprawnych] --> uzd
+    eaa[Dyrektywa Parlamentu Europejskiego i Rady w sprawie wymogów dostępności produktów i usług]
+    eaa --transpozycja--> pad
+    eaa --"norma techniczna"--> en301549
+    ead[Dyrektywa Parlamentu Europejskiego i Rady w sprawie dostępności stron internetowych i aplikacji mobilnych podmiotów publicznych]
+    ead --transpozycja--> udc
+    ead --"norma techniczna"--> en301549
+
+    %% Poziom 3: Ustawy
+    uzd[Ustawa o zapewnianiu dostępności osobom ze szczególnymi potrzebami]
+    udc[Ustawa o dostępności cyfrowej stron internetowych i aplikacji mobilnych podmiotów publicznych]
+    udc --"norma techniczna"--> en301549
+    pad[Ustawa o zapewnianiu spełniania wymagań dostępności niektórych produktów i usług  przez podmioty gospodarcze]
+    pad --odwołanie-->kredyt
+    pad --odwołanie--> hipoteczny
+    pad --odwołanie--> instrumenty
+    pad --odwołanie--> uup
+    pad --odwołanie--> usude
+    pad --"norma techniczna"--> en301549
+    rtv[Ustawa o radiofonii i telewizji]
+    pjm[Ustawa o języku migowym i innych środkach komunikowania się ]
+    upk[Ustawa o prawach konsumenta]
+pzp[Ustawa - Prawo zamówień publicznych]
+usude[Ustawa o świadczeniu usług drogą elektroniczną]
+morski[Ustawa Kodeks morski]
+zbiorkom[Ustawa o publicznym transporcie zbiorowym]
+kredyt[Ustawa o kredycie konsumenckim]
+hipoteczny[Ustawa o kredycie hipotecznym oraz o nadzorze nad pośrednikami kredytu hipotecznego i agentami ]
+instrumenty[Ustawa o obrocie instrumentami finansowymi]
+uup[Ustawa o usługach płatniczych]
+budowlane[Ustawa Prawo budowlane]
+
+
+
+    %% Poziom 4: Rozporządzenia i akty wykonawcze
+    
+    %% Poziom 5: Akty prawa miejscowego
+
+    
+    %% Poziom 6: Normy i standardy
+    en301549[EN 301 549 V3.2.1<br>Accessibility requirements for ICT products and services]
+
