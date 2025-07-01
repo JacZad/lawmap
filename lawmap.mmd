@@ -7,8 +7,8 @@ theme: default
 
 graph TD
     %% Poziom 1: Konstytucja RP
-    konstytucja[🇵🇱 Konstytucja RP]
-    click konstytucja "" "Konstytucja Rzeczypospolitej Polskiej z dnia 2 kwietnia 1997 r. (Dz.U. z 1997 r. Nr 78, poz. 483)"
+    konstytucja["🇵🇱 Konstytucja RP"]
+    click konstytucja "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19970780483" _blank "Konstytucja Rzeczypospolitej Polskiej z dnia 2 kwietnia 1997 r. (Dz.U. z 1997 r. Nr 78, poz. 483)"
     konstytucja --> uzd
     konstytucja --> rtv
     konstytucja --> p_budowlane
@@ -93,8 +93,7 @@ end
 
 
     %% Poziom 4: Rozporządzenia i akty wykonawcze
-    subgraph
-    title "Rozporządzenia"
+    subgraph Rozporządzenia
     w_budynki[Warunki dla budynków]
     click w_budynki "" "Rozporządzenie Ministra Infrastruktury z dnia 12 kwietnia 2002 r. w sprawie warunków technicznych, jakim powinny odpowiadać budynki i ich usytuowanie"
     w_metro[Wytyczne dla metra]
@@ -104,17 +103,19 @@ click w_telekomunikacja "" "Rozporządzenie Ministra Administracji i Cyfryzacji 
 w_wybory[Dostępność lokali wyborczych]
 click w_wybory "" "Rozporządzenie Ministra Infrastruktury z dnia 29 lipca 2011 r. w sprawie lokali obwodowych komisji wyborczych dostosowanych do potrzeb wyborców niepełnosprawnych  
 "end
-    %% Poziom 5: Akty prawa miejscowego
-
-    
     %% Poziom 6: Normy i standardy
-    subgraph
-    title "Normy i zalecenia"
-    en301549[EN 301 549 V3.2.1<br>Accessibility requirements for ICT products and services]
-    wytyczne_mfipr[Wytyczne dotyczące realizacji zasad równościowych w ramach funduszy unijnych na lata 2021-2027]
-    wytyczne_pfron[Wytyczne Jak zapewnić dostępność produktów i usług]
-    krrit_ad[Rekomendacje KRRiT dotyczące audiodeskrypcji]
-    krrit_cc[Rekomendacje KRRiT dotyczące napisów dla niesłyszących]
-    krrit_pjm[Stanowisko KRRiT w sprawie tłumaczenia na polski język migowy]
+    subgraph Normy
+    en301549[EN 301 549 V3.2.1]
+    wytyczne_mfipr[Wytyczne MFIPR]
+    wytyczne_pfron[Wytyczne PFRON]
+    krrit_ad[Rekomendacje AD]
+    krrit_cc[Rekomendacje CC]
+    krrit_pjm[Rekomendacje PJM]
+end
+
+%% Połączenia między poziomami
+w_budynki --> p_budowlane
+w_telekomunikacja --> p_telekomunikacyjne
+w_wybory --> k_wyborczy
 
 
