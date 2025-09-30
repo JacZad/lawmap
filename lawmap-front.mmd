@@ -1,7 +1,83 @@
+---
+title: 'Lawmap: Dostępność Cyfrowa i Architektoniczna w Polsce'
+author: 'Jacek'
+date: '2025-07-07'
+description: 'Mapa myśli przedstawiająca relacje między kluczowymi aktami prawnymi dotyczącymi dostępności w Polsce, od Konstytucji po normy techniczne.'
+mermaid:
+  theme: 'neutral'
+---
+
 graph TD
-    %% Poziom 1: Konstytucja RP
-    konstytucja["🇵🇱 Konstytucja RP"]
-    click konstytucja "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19970780483" "Konstytucja Rzeczypospolitej Polskiej z dnia 2 kwietnia 1997 r. (Dz.U. z 1997 r. Nr 78, poz. 483)"
+    %% Definicje stylów dla różnych typów aktów prawnych
+    classDef ue fill:#003399,color:#fff,stroke:#000,stroke-width:2px;
+    classDef pl_konstytucja fill:#D22730,color:#fff,stroke:#000,stroke-width:4px;
+    classDef pl_ustawa fill:#fff,color:#000,stroke:#D22730,stroke-width:2px;
+    classDef pl_rozporzadzenie fill:#fff,color:#000,stroke:#D22730,stroke-width:1px,stroke-dasharray: 5 5;
+    classDef standard fill:#f2f2f2,color:#000,stroke:#000,stroke-width:1px;
+
+    %% Poziom 0: Konstytucja
+    subgraph "🇵🇱 Konstytucja"
+        konstytucja["Konstytucja RP"]
+    end
+
+    %% Poziom 1: Prawo międzynarodowe i UE
+    subgraph "🇪🇺 Prawo Międzynarodowe i Unijne"
+        kpon["🇺🇳 Konwencja Praw Osób Niepełnosprawnych"]
+        eaa["Dyrektywa o dostępności produktów i usług (EAA)"]
+        ead["Dyrektywa o dostępności stron internetowych (WAD)"]
+        ue_loty["Rozporządzenie o podróżach lotniczych"]
+        ue_autobusy["Rozporządzenie w sprawie autobusów"]
+        karta["Karta praw podstawowych UE"]
+    end
+
+    %% Poziom 2: Ustawy
+    subgraph "🇵🇱 Ustawy"
+        uzd["Ustawa o zapewnianiu dostępności"]
+        udc["Ustawa o dostępności cyfrowej"]
+        pad["Ustawa o dostępności produktów i usług"]
+        p_budowlane["Prawo budowlane"]
+        k_cywilny["Kodeks cywilny"]
+        k_wyborczy["Kodeks wyborczy"]
+        k_morski["Kodeks morski"]
+        p_lotnicze["Prawo lotnicze"]
+        p_telekomunikacyjne["Prawo telekomunikacyjne"]
+        rtv["Ustawa o radiofonii i telewizji"]
+        pzp["Prawo zamówień publicznych"]
+        u_obszarymorskie["Ustawa o obszarach morskich"]
+        u_zeglugasrodladowa["Ustawa o żegludze śródlądowej"]
+        u_transportdrogowy["Ustawa o transporcie drogowym"]
+        u_transportkolejowy["Ustawa o transporcie kolejowym"]
+        u_platnicze["Ustawa o usługach płatniczych"]
+        u_alarmowy["Ustawa o systemie powiadamiania ratunkowego"]
+        u_reklamacyjny["Ustawa o rozpatrywaniu reklamacji"]
+        kredyt["Ustawa o kredycie konsumenckim"]
+        hipoteczny["Ustawa o kredycie hipotecznym"]
+        instrumenty["Ustawa o obrocie instrumentami finansowymi"]
+        usude["Ustawa o systemie usług zaufania"]
+    end
+
+    %% Poziom 3: Akty wykonawcze (Rozporządzenia)
+    subgraph "🇵🇱 Rozporządzenia"
+        w_budynki["Warunki techniczne dla budynków"]
+        w_metro["Warunki techniczne dla metra"]
+        w_telekomunikacja["Dostępność usług telekomunikacyjnych"]
+        w_wybory["Dostępność lokali wyborczych"]
+        warunki_dd["Warunki techniczne deklaracji dostępności"]
+    end
+
+    %% Poziom 4: Normy i standardy
+    subgraph "Normy i Wytyczne"
+        en301549["Norma EN 301 549"]
+        wytyczne_mfipr["Wytyczne MFIPR"]
+        wytyczne_pfron["Wytyczne PFRON"]
+        krrit_ad["Rekomendacje KRRiT (Audiodeskrypcja)"]
+        krrit_cc["Rekomendacje KRRiT (Napisy)"]
+        krrit_pjm["Rekomendacje KRRiT (Tłumacz PJM)"]
+    end
+
+    %% --- Połączenia ---
+
+    %% Konstytucja jako źródło
     konstytucja --> uzd
     konstytucja --> rtv
     konstytucja --> p_budowlane
@@ -9,103 +85,72 @@ graph TD
     konstytucja --> k_wyborczy
     konstytucja --> k_morski
 
-    %% Poziom 2: Umowy Międzynarodowe / Prawo UE
-    kpon["🇺🇳 Konwencja Praw Osób Niepełnosprawnych"]
-    click kpon "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20120001169" "Konwencja o prawach osób niepełnosprawnych, sporządzona w Nowym Jorku dnia 13 grudnia 2006 r. (Dz.U. z 2012 r. poz. 1169)"
+    %% Prawo UE i jego transpozycja
     kpon --> uzd
-    eaa["🇪🇺 Dyrektywa o dostępności produktów i usług"]
-    click eaa "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32019L0882" "Dyrektywa Parlamentu Europejskiego i Rady (UE) 2019/882 z dnia 17 kwietnia 2019 r. w sprawie wymogów dostępności produktów i usług"
-    eaa --transpozycja--> pad
-    eaa --"norma techniczna"--> en301549
-    ead["🇪🇺 Dyrektywa o dostępności stron internetowych"]
-    click ead "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32016L2102" "Dyrektywa Parlamentu Europejskiego i Rady (UE) 2016/2102 z dnia 26 października 2016 r. w sprawie dostępności stron internetowych i mobilnych aplikacji organów sektora publicznego"
-    ead --transpozycja--> udc
-    ead --"norma techniczna"--> en301549
-    ue_loty["🇪🇺 Rozporządzenie o podróżach lotniczych"]
-    click ue_loty "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32006R1107" "Rozporządzenie (WE) nr 1107/2006 z dnia 5 lipca 2006 r. w sprawie praw osób niepełnosprawnych oraz osób o ograniczonej sprawności ruchowej w podróżach lotniczych"
-    ue_loty --transpozycja--> p_lotnicze
-    ue_autobusy["🇪🇺 Rozporządzenie w sprawie autobusów"]
-    click ue_autobusy "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32011R0181" "Rozporządzenie Parlamentu Europejskiego i Rady (UE) nr 181/2011 z dnia 16 lutego 2011 r. dotyczące praw pasażerów w transporcie autobusowym i autokarowym"
-    karta["🇪🇺 Karta praw podstawowych"]
-    click karta "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A12007P000" "Karta Praw Podstawowych Unii Europejskiej (Dz. Urz. UE C 303 z 14.12.2007 r.)"
     karta --> uzd
+    ead --transpozycja--> udc
+    eaa --transpozycja--> pad
+    ue_loty --implementacja--> p_lotnicze
 
-    %% Poziom 3: Ustawy
-    subgraph Ustawy
-        k_cywilny[Kodeks cywilny]
-        click k_cywilny "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640160093" "Ustawa z dnia 23 kwietnia 1964 r. – Kodeks cywilny (Dz.U. z 1964 r. Nr 16, poz. 93)"
-        k_morski[Kodeks morski]
-        click k_morski "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20011381545" "Ustawa z dnia 18 września 2001 r. – Kodeks morski (Dz.U. z 2001 r. Nr 138, poz. 1545)"
-        k_wyborczy[Kodeks wyborczy]
-        click k_wyborczy "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20110210112" "Ustawa z dnia 5 stycznia 2011 r. – Kodeks wyborczy"
-        pzp[Prawo zamówień publicznych]
-        click pzp "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20190002019" "Ustawa z dnia 11 września 2019 r. – Prawo zamówień publicznych"
-        p_lotnicze[Prawo lotnicze]
-        click p_lotnicze "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20020730050" "Ustawa z dnia 3 lipca 2002 r. – Prawo lotnicze"
-        p_budowlane[Prawo budowlane]
-        click p_budowlane "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19940770067" "Ustawa z dnia 7 lipca 1994 r. – Prawo budowlane"
-        p_telekomunikacyjne[Prawo telekomunikacyjne]
-        click p_telekomunikacyjne "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20041670710" "Ustawa z dnia 16 lipca 2004 r. – Prawo telekomunikacyjne"
-        uzd[Ustawa o zapewnianiu dostępności]
-        click uzd "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20190001696" "Ustawa z dnia 19 lipca 2019 r. o zapewnianiu dostępności osobom ze szczególnymi potrzebami (Dz.U. z 2019 r. poz. 1696)"
-        udc[Ustawa o dostępności cyfrowej]
-        click udc "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20190000848" "Ustawa z dnia 4 kwietnia 2019 r. o dostępności cyfrowej stron internetowych i aplikacji mobilnych podmiotów publicznych (Dz.U. z 2019 r. poz. 848)"
-        udc --"norma techniczna"--> en301549
-        udc--delegacja-->warunki_dd[Warunki techniczne deklaracji dostępności]
-        pad[Ustawa o dostępności produktów i usług]
-        click pad "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20240000731/T/D20240731L.pdf" "Ustawa z dnia 26 kwietnia 2024 r. o zapewnianiu spełniania wymagań dostępności niektórych produktów i usług przez podmioty gospodarcze (Dz.U. z 2024 r. poz. 1171)"
-        pad--zmienia-->u_obszarymorskie[Ustawa o obszarach morskich]
-        click u_obszarymorskie "Ustawa z dnia 21 marca 1991 r. o obszarach morskich Rzeczypospolitej Polskiej i administracji morskiej"
-        pad--zmienia-->u_zeglugasrodladowa[Ustawa o żegludze śródlądowej]
-        click u_zeglugasrodladowa  "Ustawa z dnia 21 grudnia 2000 r. o żegludze śródlądowej"
-        pad--zmienia-->u_transportdrogowy[Ustawa o transporcie drogowym]
-        click transportzbiorowy "Ustawa z dnia 6 września 2001 r. o transporcie drogowym"
-        pad--zmienia-->p_lotnicze[Prawo lotnicze]
-        click p_lotnicze "" "Ustawa z dnia 3 lipca 2002 r. – Prawo lotnicze"
-        pad--zmienia-->u_transportkolejowy[Ustawa o transporcie kolejowym]
-        click u_transportkolejowy "Ustawa z dnia 28 marca 2003 r. o transporcie kolejowym"
-        pad--zmienia-->u_platnicze[Ustawa o usługach płatniczych]
-        click u_platnicze "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20110001320" "Ustawa z dnia 19 sierpnia 2011 r. o usługach płatniczych (Dz.U. z 2011 r. poz. 1136)"
-        pad--zmienia-->u_alarmowy[Ustawa o systemie powiadamiania ratunkowego]
-        click u_alarmowy "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20130001520" "Ustawa z dnia 22 listopada 2013 r. o systemie powiadamiania ratunkowego (Dz.U. z 2013 r. poz. 1520)"
-        pad--zmienia-->u_reklamacyjny[Ustawa o rozpatrywaniu reklamacji]
-        click u_reklamacyjny "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20150001320" "Ustawa z dnia 5 sierpnia 2015 r. o rozpatrywaniu reklamacji przez podmioty rynku finansowego, o Rzeczniku Finansowym i o Funduszu Edukacji Finansowej (Dz.U. z 2015 r. poz. 1320)"
-        pad--zmienia-->uzd
-        click uzd "Ustawa z dnia 19 lipca 2019 r. o zapewnianiu dostępności osobom ze szczególnymi potrzebami"
-        pad --odwołanie--> kredyt
-        pad --odwołanie--> hipoteczny
-        pad --odwołanie--> instrumenty
-        pad --odwołanie--> uup
-        pad --odwołanie--> usude
-        pad --"norma techniczna"--> en301549
-        pad --delegacja--> wytyczne_pfron
-    end
+    %% Ustawa o dostępności cyfrowej (UDC)
+    udc --delegacja--> warunki_dd
+    udc --"norma techniczna"--> en301549
 
-    %% Poziom 4: Rozporządzenia i akty wykonawcze
-    subgraph Rozporządzenia
-        w_budynki[Warunki dla budynków]
-        click w_budynki "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20020750690" "Rozporządzenie Ministra Infrastruktury z dnia 12 kwietnia 2002 r. w sprawie warunków technicznych, jakim powinny odpowiadać budynki i ich usytuowanie"
-        w_metro[Wytyczne dla metra]
-        click w_metro "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230001054" "Rozporządzenie Ministra Infrastruktury z dnia 16 maja 2023 r. w sprawie warunków technicznych, jakim powinny odpowiadać obiekty budowlane metra i ich usytuowanie – określa wymagania dotyczące dostępności stacji metra dla osób z niepełnosprawnościami"
-        w_telekomunikacja[Dostępność usług telekomunikacyjnych]
-        click w_telekomunikacja "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20140000441" "Rozporządzenie Ministra Administracji i Cyfryzacji z dnia 26 marca 2014 r. w sprawie szczegółowych wymagań dotyczących świadczenia udogodnień dla osób niepełnosprawnych przez dostawców publicznie dostępnych usług telefonicznych"
-        w_wybory[Dostępność lokali wyborczych]
-        click w_wybory "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20110001509" "Rozporządzenie Ministra Infrastruktury z dnia 29 lipca 2011 r. w sprawie lokali obwodowych komisji wyborczych dostosowanych do potrzeb wyborców niepełnosprawnych"
-    end
+    %% Europejska ustawa o dostępności (PAD) - zmiany i odwołania
+    pad --zmienia--> u_obszarymorskie
+    pad --zmienia--> u_zeglugasrodladowa
+    pad --zmienia--> u_transportdrogowy
+    pad --zmienia--> p_lotnicze
+    pad --zmienia--> u_transportkolejowy
+    pad --zmienia--> u_platnicze
+    pad --zmienia--> u_alarmowy
+    pad --zmienia--> u_reklamacyjny
+    pad --zmienia--> uzd
+    pad --odwołanie--> kredyt
+    pad --odwołanie--> hipoteczny
+    pad --odwołanie--> instrumenty
+    pad --odwołanie--> u_platnicze
+    pad --odwołanie--> usude
+    pad --"norma techniczna"--> en301549
+    pad --delegacja--> wytyczne_pfron
 
-    %% Poziom 6: Normy i standardy
-    subgraph Normy
-        en301549[EN 301 549 V3.2.1]
-        wytyczne_mfipr[Wytyczne MFIPR]
-        wytyczne_pfron[Wytyczne PFRON]
-        krrit_ad[Rekomendacje AD]
-        krrit_cc[Rekomendacje CC]
-        krrit_pjm[Rekomendacje PJM]
-    end
+    %% Powiązania Ustaw z Rozporządzeniami
+    p_budowlane --> w_budynki
+    p_budowlane --> w_metro
+    p_telekomunikacyjne --> w_telekomunikacja
+    k_wyborczy --> w_wybory
 
-    %% Połączenia między poziomami
-    w_budynki --> p_budowlane
-    w_telekomunikacja --> p_telekomunikacyjne
-    w_wybory --> k_wyborczy
+    %% Powiązania z normami
+    eaa --"norma techniczna"--> en301549
 
+    %% --- Definicje linków i stylów ---
 
+    %% Style
+    class konstytucja pl_konstytucja
+    class kpon,eaa,ead,ue_loty,ue_autobusy,karta ue
+    class uzd,udc,pad,p_budowlane,k_cywilny,k_wyborczy,k_morski,p_lotnicze,p_telekomunikacyjne,rtv,pzp,u_obszarymorskie,u_zeglugasrodladowa,u_transportdrogowy,u_transportkolejowy,u_platnicze,u_alarmowy,u_reklamacyjny,kredyt,hipoteczny,instrumenty,usude pl_ustawa
+    class w_budynki,w_metro,w_telekomunikacja,w_wybory,warunki_dd pl_rozporzadzenie
+    class en301549,wytyczne_mfipr,wytyczne_pfron,krrit_ad,krrit_cc,krrit_pjm standard
+
+    %% Linki
+    click konstytucja "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19970780483" "Konstytucja Rzeczypospolitej Polskiej z dnia 2 kwietnia 1997 r."
+    click kpon "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20120001169" "Konwencja o prawach osób niepełnosprawnych"
+    click eaa "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32019L0882" "Dyrektywa Parlamentu Europejskiego i Rady (UE) 2019/882"
+    click ead "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32016L2102" "Dyrektywa Parlamentu Europejskiego i Rady (UE) 2016/2102"
+    click ue_loty "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32006R1107" "Rozporządzenie (WE) nr 1107/2006 w sprawie praw osób niepełnosprawnych w podróżach lotniczych"
+    click ue_autobusy "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32011R0181" "Rozporządzenie (UE) nr 181/2011 dotyczące praw pasażerów w transporcie autobusowym"
+    click karta "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A12007P000" "Karta Praw Podstawowych Unii Europejskiej"
+    click k_cywilny "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19640160093" "Ustawa z dnia 23 kwietnia 1964 r. – Kodeks cywilny"
+    click k_morski "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20011381545" "Ustawa z dnia 18 września 2001 r. – Kodeks morski"
+    click k_wyborczy "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20110210112" "Ustawa z dnia 5 stycznia 2011 r. – Kodeks wyborczy"
+    click pzp "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20190002019" "Ustawa z dnia 11 września 2019 r. – Prawo zamówień publicznych"
+    click p_lotnicze "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20020730050" "Ustawa z dnia 3 lipca 2002 r. – Prawo lotnicze"
+    click p_budowlane "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19940770067" "Ustawa z dnia 7 lipca 1994 r. – Prawo budowlane"
+    click p_telekomunikacyjne "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20041670710" "Ustawa z dnia 16 lipca 2004 r. – Prawo telekomunikacyjne"
+    click uzd "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20190001696" "Ustawa z dnia 19 lipca 2019 r. o zapewnianiu dostępności"
+    click udc "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20190000848" "Ustawa z dnia 4 kwietnia 2019 r. o dostępności cyfrowej"
+    click pad "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20240000731/T/D20240731L.pdf" "Ustawa z dnia 26 kwietnia 2024 r. o zapewnianiu spełniania wymagań dostępności"
+    click w_budynki "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20020750690" "Rozporządzenie w sprawie warunków technicznych, jakim powinny odpowiadać budynki"
+    click w_metro "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230001054" "Rozporządzenie w sprawie warunków technicznych dla obiektów budowlanych metra"
+    click w_telekomunikacja "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20140000441" "Rozporządzenie w sprawie udogodnień dla osób niepełnosprawnych (usługi telefoniczne)"
+    click w_wybory "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20110001509" "Rozporządzenie w sprawie lokali obwodowych komisji wyborczych"

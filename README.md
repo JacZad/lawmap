@@ -42,3 +42,4 @@ Jeśli znajdziesz błędy w schemacie lub masz propozycje dodania kolejnych prze
 ## Licencja
 
 Ten projekt jest udostępniany na licencji [MIT](LICENSE).
+    
