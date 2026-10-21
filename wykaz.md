@@ -22,7 +22,7 @@ Lista zawiera wykaz aktów prawnych wspominanych w podręczniku. Podajemy tu zar
 24. Ustawa z dnia 3 lipca 2002 r. – Prawo lotnicze – odnosi się do praw pasażerów o ograniczonej możliwości poruszania się, w tym obowiązki przewoźników lotniczych i lotnisk
 25. Ustawa z dnia 7 lipca 1994 r. – Prawo budowlane – określa obowiązki w zakresie zapewnienia dostępności obiektów budowlanych dla osób z niepełnosprawnościami
 26. Ustawa z dnia 16 lipca 2004 r. – Prawo telekomunikacyjne – zawiera przepisy dotyczące zapewnienia dostępności usług telekomunikacyjnych dla osób z niepełnosprawnościami
-8. Ustawa z dnia 26 kwietnia 2024 r. o zapewnianiu spełniania wymagań dostępności niektórych produktów i usług przez podmioty gospodarcze (Dz.U. z 2024 r. poz. 1171)
+8. Ustawa z dnia 26 kwietnia 2024 r. o zapewnianiu spełniania wymagań dostępności niektórych produktów i usług przez podmioty gospodarcze (Dz.U. z 2024 r. poz. 731)
 9. Ustawa z dnia 19 lipca 2019 r. o zapewnianiu dostępności osobom ze szczególnymi potrzebami (Dz.U. z 2019 r. poz. 1696)
 10. Ustawa z dnia 4 kwietnia 2019 r. o dostępności cyfrowej stron internetowych i aplikacji mobilnych podmiotów publicznych (Dz.U. z 2019 r. poz. 848)
 12. Ustawa z dnia 19 sierpnia 2011 r. o języku migowym i innych środkach komunikowania się (Dz.U. z 2011 r. Nr 209, poz. 1243)
