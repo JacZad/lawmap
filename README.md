@@ -9,31 +9,48 @@ Projekt zawiera schemat ilustrujący hierarchię aktów prawnych dotyczących do
 
 Schemat przedstawia zależności między różnymi aktami prawnymi regulującymi kwestie dostępności w Polsce, w tym Konstytucją RP, umowami międzynarodowymi, dyrektywami UE, ustawami i rozporządzeniami.
 
-## Technologie
-
-*   [Mermaid](https://mermaid.js.org/) - język znaczników i narzędzie do generowania diagramów i schematów blokowych z tekstu.
-
 ## Pliki
 
-*   `lawmap.mmd` - Plik źródłowy Mermaid zawierający definicję schematu. Można go edytować w dowolnym edytorze tekstowym i renderować za pomocą narzędzi Mermaid.
-*   `lawmap.svg` - Plik SVG (Scalable Vector Graphics) zawierający graficzną reprezentację schematu. Można go wyświetlać w przeglądarkach internetowych i edytorach grafiki wektorowej.
+*   `lawmap.yaml` - **jedyne źródło danych**: akty, ich identyfikatory (ELI, CELEX), opisy i relacje. Zmiany wprowadzamy tylko tutaj.
+*   `lawmap.py` - skrypt, który sprawdza status aktów w ELI i generuje pozostałe pliki.
+*   `stan.json` - status polskich aktów pobrany z API ELI Sejmu (generowany).
+*   `lawmap.mmd` - schemat Mermaid (generowany).
+*   `lawmap.md` - **tekstowa wersja schematu**, z nagłówkami i listami, wygodna dla czytników ekranu (generowana).
+*   `lawmap.svg` - graficzna wersja schematu.
 
-## Jak wygenerować plik SVG
+## Aktualizacja
 
-Plik SVG można wygenerować z pliku `lawmap.mmd` za pomocą narzędzi Mermaid. Na przykład, używając [Mermaid CLI](https://github.com/mermaid-js/mermaid-cli):
+Potrzebny jest [uv](https://docs.astral.sh/uv/). Zależności (PyYAML) instaluje się same.
 
 ```bash
-npm install -g @mermaid-js/mermaid-cli
-mmdc -i lawmap.mmd -o lawmap.svg
+uv run lawmap.py            # sprawdza status w ELI i generuje lawmap.mmd oraz lawmap.md
+uv run lawmap.py sprawdz    # tylko sprawdzenie statusu (stan.json)
+uv run lawmap.py generuj    # tylko generowanie z lawmap.yaml i stan.json
+npx -y @mermaid-js/mermaid-cli -i lawmap.mmd -o lawmap.svg
 ```
 
-Upewnij się, że masz zainstalowany [Node.js](https://nodejs.org/) i [npm](https://www.npmjs.com/) przed uruchomieniem powyższych poleceń.
+Skrypt oznacza akty, które według ELI nie obowiązują (szare pole i dopisek „nie obowiązuje”), i wypisuje zmiany statusu od poprzedniego sprawdzenia. Akty unijne (CELEX) i normy nie są sprawdzane automatycznie.
+
+### Pola w `lawmap.yaml`
+
+| Pole | Znaczenie |
+|---|---|
+| `id` | krótki identyfikator, używany w relacjach i w schemacie |
+| `skrot` | nazwa wyświetlana w schemacie |
+| `poziom` | `konstytucja`, `miedzynarodowe`, `ustawy`, `rozporzadzenia`, `normy` |
+| `typ` | np. `ustawa`, `rozporzadzenie`, `dyrektywa_ue`, `norma`, `wytyczne` |
+| `eli` | identyfikator ELI, np. `DU/2019/1696`; pełny tytuł i status pobiera skrypt |
+| `celex` | identyfikator EUR-Lex aktów unijnych |
+| `url`, `tytul` | dla dokumentów spoza ELI i EUR-Lex |
+| `opis`, `uwagi` | krótkie objaśnienie i zastrzeżenia (np. wątpliwy stan prawny) |
+
+Typy relacji: `zrodlo`, `transpozycja`, `implementacja`, `delegacja`, `zmienia`, `odwolanie`, `norma`, `zastapiony_przez`.
 
 ## Wyświetlanie schematu
 
 Tu możesz obejrzeć [wyrenderowany schemat w postaci graficznej.](https://github.com/JacZad/lawmap/blob/main/lawmap.mmd)
 
-**Uwaga dla użytkowników czytników ekranu:** Wyrenderowany schemat SVG jest mało dostępny dla czytników ekranu. Już trochę pracują nad tym w Mermaid. Na ten moment proponuję korzystanie z pliku źródłowego, który jest czysto tekstowy i ma prostą strukturę.
+Wyrenderowany schemat SVG jest mało dostępny dla czytników ekranu. Dlatego plik [lawmap.md](lawmap.md) zawiera tę samą treść w postaci tekstu: każdy akt ma nagłówek, status i listę powiązań w obu kierunkach.
 
 ## Zgłaszanie błędów i propozycje
 

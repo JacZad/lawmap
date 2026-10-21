@@ -1,0 +1,290 @@
+{
+  "konstytucja": {
+    "eli": "DU/1997/483",
+    "tytul": "Konstytucja Rzeczypospolitej Polskiej z dnia 2 kwietnia 1997 r",
+    "status": "obowiązujący",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "kpon": {
+    "eli": "DU/2012/1169",
+    "tytul": "Konwencja o prawach osób niepełnosprawnych, sporządzona w Nowym Jorku dnia 13 grudnia 2006 r",
+    "status": "obowiązujący",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "uzd": {
+    "eli": "DU/2019/1696",
+    "tytul": "Ustawa z dnia 19 lipca 2019 r. o zapewnianiu dostępności osobom ze szczególnymi potrzebami",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "udc": {
+    "eli": "DU/2019/848",
+    "tytul": "Ustawa z dnia 4 kwietnia 2019 r. o dostępności cyfrowej stron internetowych i aplikacji mobilnych podmiotów publicznych",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "pad": {
+    "eli": "DU/2024/731",
+    "tytul": "Ustawa z dnia 26 kwietnia 2024 r. o zapewnianiu spełniania wymagań dostępności niektórych produktów i usług przez podmioty gospodarcze",
+    "status": "obowiązujący",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "p_budowlane": {
+    "eli": "DU/1994/414",
+    "tytul": "Ustawa z dnia 7 lipca 1994 r. - Prawo budowlane",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "k_cywilny": {
+    "eli": "DU/1964/93",
+    "tytul": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "k_wyborczy": {
+    "eli": "DU/2011/112",
+    "tytul": "Ustawa z dnia 5 stycznia 2011 r. - Kodeks wyborczy",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "k_morski": {
+    "eli": "DU/2001/1545",
+    "tytul": "Ustawa z dnia 18 września 2001 r. Kodeks morski",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "p_lotnicze": {
+    "eli": "DU/2002/1112",
+    "tytul": "Ustawa z dnia 3 lipca 2002 r. Prawo lotnicze",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "p_telekomunikacyjne": {
+    "eli": "DU/2004/1800",
+    "tytul": "Ustawa z dnia 16 lipca 2004 r. Prawo telekomunikacyjne",
+    "status": "uchylony",
+    "obowiazuje": false,
+    "uchylony_od": "2024-11-10",
+    "sprawdzono": "2026-10-21"
+  },
+  "pke": {
+    "eli": "DU/2024/1221",
+    "tytul": "Ustawa z dnia 12 lipca 2024 r. - Prawo komunikacji elektronicznej",
+    "status": "obowiązujący",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "rtv": {
+    "eli": "DU/1993/34",
+    "tytul": "Ustawa z dnia 29 grudnia 1992 r. o radiofonii i telewizji",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "pzp": {
+    "eli": "DU/2019/2019",
+    "tytul": "Ustawa z dnia 11 września 2019 r. - Prawo zamówień publicznych",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "j_migowy": {
+    "eli": "DU/2011/1243",
+    "tytul": "Ustawa z dnia 19 sierpnia 2011 r. o języku migowym i innych środkach komunikowania się",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "prawa_konsumenta": {
+    "eli": "DU/2014/827",
+    "tytul": "Ustawa z dnia 30 maja 2014 r. o prawach konsumenta",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "uslugi_elektroniczne": {
+    "eli": "DU/2002/1204",
+    "tytul": "Ustawa z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "transport_zbiorowy": {
+    "eli": "DU/2011/13",
+    "tytul": "Ustawa z dnia 16 grudnia 2010 r. o publicznym transporcie zbiorowym",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "rehabilitacja": {
+    "eli": "DU/1997/776",
+    "tytul": "Ustawa z dnia 27 sierpnia 1997 r. o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "u_obszarymorskie": {
+    "eli": "DU/1991/131",
+    "tytul": "Ustawa z dnia 21 marca 1991 r. o obszarach morskich Rzeczypospolitej Polskiej i administracji morskiej",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "u_zeglugasrodladowa": {
+    "eli": "DU/2001/43",
+    "tytul": "Ustawa z dnia 21 grudnia 2000 r. o żegludze śródlądowej",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "u_transportdrogowy": {
+    "eli": "DU/2001/1371",
+    "tytul": "Ustawa z dnia 6 września 2001 r. o transporcie drogowym",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "u_transportkolejowy": {
+    "eli": "DU/2003/789",
+    "tytul": "Ustawa z dnia 28 marca 2003 r. o transporcie kolejowym",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "u_platnicze": {
+    "eli": "DU/2011/1175",
+    "tytul": "Ustawa z dnia 19 sierpnia 2011 r. o usługach płatniczych",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "u_alarmowy": {
+    "eli": "DU/2013/1635",
+    "tytul": "Ustawa z dnia 22 listopada 2013 r. o systemie powiadamiania ratunkowego",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "u_reklamacyjny": {
+    "eli": "DU/2015/1348",
+    "tytul": "Ustawa z dnia 5 sierpnia 2015 r. o rozpatrywaniu reklamacji przez podmioty rynku finansowego, o Rzeczniku Finansowym i o Funduszu Edukacji Finansowej",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "kredyt": {
+    "eli": "DU/2011/715",
+    "tytul": "Ustawa z dnia 12 maja 2011 r. o kredycie konsumenckim",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "hipoteczny": {
+    "eli": "DU/2017/819",
+    "tytul": "Ustawa z dnia 23 marca 2017 r. o kredycie hipotecznym oraz o nadzorze nad pośrednikami kredytu hipotecznego i agentami",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "instrumenty": {
+    "eli": "DU/2005/1538",
+    "tytul": "Ustawa z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "usude": {
+    "eli": "DU/2016/1579",
+    "tytul": "Ustawa z dnia 5 września 2016 r. o usługach zaufania oraz identyfikacji elektronicznej",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "w_budynki": {
+    "eli": "DU/2002/690",
+    "tytul": "Rozporządzenie Ministra Infrastruktury z dnia 12 kwietnia 2002 r. w sprawie warunków technicznych, jakim powinny odpowiadać budynki i ich usytuowanie",
+    "status": "uznany za uchylony",
+    "obowiazuje": false,
+    "uchylony_od": "2026-09-21",
+    "sprawdzono": "2026-10-21"
+  },
+  "w_metro": {
+    "eli": "DU/2023/1210",
+    "tytul": "Rozporządzenie Ministra Infrastruktury z dnia 16 maja 2023 r. w sprawie warunków technicznych, jakim powinny odpowiadać obiekty budowlane metra i ich usytuowanie",
+    "status": "obowiązujący",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "w_telekomunikacja": {
+    "eli": "DU/2014/464",
+    "tytul": "Rozporządzenie Ministra Administracji i Cyfryzacji z dnia 26 marca 2014 r. w sprawie szczegółowych wymagań dotyczących świadczenia udogodnień dla osób niepełnosprawnych przez dostawców publicznie dostępnych usług telefonicznych",
+    "status": "obowiązujący",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "w_wybory": {
+    "eli": "DU/2011/938",
+    "tytul": "Rozporządzenie Ministra Infrastruktury z dnia 29 lipca 2011 r. w sprawie lokali obwodowych komisji wyborczych dostosowanych do potrzeb wyborców niepełnosprawnych",
+    "status": "akt posiada tekst jednolity",
+    "obowiazuje": true,
+    "uchylony_od": null,
+    "sprawdzono": "2026-10-21"
+  },
+  "kri": {
+    "eli": "DU/2024/773",
+    "tytul": "Rozporządzenie Rady Ministrów z dnia 21 maja 2024 r. w sprawie Krajowych Ram Interoperacyjności, minimalnych wymagań dla rejestrów publicznych i wymiany informacji w postaci elektronicznej oraz minimalnych wymagań dla systemów teleinformatycznych",
+    "status": "obowiązujący",
+    "obowiazuje": true,
+    "uchylony_od": "2027-02-23",
+    "sprawdzono": "2026-10-21"
+  },
+  "kri_2012": {
+    "eli": "DU/2012/526",
+    "tytul": "Rozporządzenie Rady Ministrów z dnia 12 kwietnia 2012 r. w sprawie Krajowych Ram Interoperacyjności, minimalnych wymagań dla rejestrów publicznych i wymiany informacji w postaci elektronicznej oraz minimalnych wymagań dla systemów teleinformatycznych",
+    "status": "uznany za uchylony",
+    "obowiazuje": false,
+    "uchylony_od": "2024-05-23",
+    "sprawdzono": "2026-10-21"
+  }
+}

@@ -1,0 +1,354 @@
+# Mapa aktów prawnych o dostępności w Polsce: jedyne źródło danych.
+# Z tego pliku powstają lawmap.mmd (schemat), lawmap.md (wersja tekstowa) i stan.json
+# (status aktów sprawdzony w ELI). Opis pól: README.md.
+
+meta:
+  tytul: "Lawmap: dostępność cyfrowa i architektoniczna w Polsce"
+  autor: Jacek Zadrożny
+  opis: >-
+    Mapa relacji między kluczowymi aktami prawnymi dotyczącymi dostępności w Polsce,
+    od Konstytucji po normy techniczne.
+  licencja: MIT
+
+poziomy:
+  - id: konstytucja
+    nazwa: Konstytucja
+  - id: miedzynarodowe
+    nazwa: Prawo międzynarodowe i unijne
+  - id: ustawy
+    nazwa: Ustawy
+  - id: rozporzadzenia
+    nazwa: Rozporządzenia
+  - id: normy
+    nazwa: Normy i wytyczne
+
+akty:
+  # Konstytucja
+  - id: konstytucja
+    skrot: Konstytucja RP
+    poziom: konstytucja
+    typ: konstytucja
+    eli: DU/1997/483
+
+  # Prawo międzynarodowe i unijne
+  - id: kpon
+    skrot: Konwencja o prawach osób niepełnosprawnych
+    poziom: miedzynarodowe
+    typ: umowa_miedzynarodowa
+    eli: DU/2012/1169
+  - id: karta
+    skrot: Karta praw podstawowych UE
+    poziom: miedzynarodowe
+    typ: traktat_ue
+    celex: 12016P/TXT
+    tytul: Karta praw podstawowych Unii Europejskiej
+  - id: eaa
+    skrot: Dyrektywa o dostępności produktów i usług (EAA)
+    poziom: miedzynarodowe
+    typ: dyrektywa_ue
+    celex: 32019L0882
+    tytul: >-
+      Dyrektywa Parlamentu Europejskiego i Rady (UE) 2019/882 z dnia 17 kwietnia 2019 r.
+      w sprawie wymogów dostępności produktów i usług
+  - id: wad
+    skrot: Dyrektywa o dostępności stron internetowych (WAD)
+    poziom: miedzynarodowe
+    typ: dyrektywa_ue
+    celex: 32016L2102
+    tytul: >-
+      Dyrektywa Parlamentu Europejskiego i Rady (UE) 2016/2102 z dnia 26 października 2016 r.
+      w sprawie dostępności stron internetowych i mobilnych aplikacji organów sektora publicznego
+  - id: ue_loty
+    skrot: Rozporządzenie o podróżach lotniczych
+    poziom: miedzynarodowe
+    typ: rozporzadzenie_ue
+    celex: 32006R1107
+    tytul: >-
+      Rozporządzenie (WE) nr 1107/2006 z dnia 5 lipca 2006 r. w sprawie praw osób
+      niepełnosprawnych oraz osób o ograniczonej sprawności ruchowej w podróżach lotniczych
+  - id: ue_autobusy
+    skrot: Rozporządzenie o transporcie autobusowym
+    poziom: miedzynarodowe
+    typ: rozporzadzenie_ue
+    celex: 32011R0181
+    tytul: >-
+      Rozporządzenie Parlamentu Europejskiego i Rady (UE) nr 181/2011 z dnia 16 lutego 2011 r.
+      dotyczące praw pasażerów w transporcie autobusowym i autokarowym
+
+  # Ustawy
+  - id: uzd
+    skrot: Ustawa o zapewnianiu dostępności
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2019/1696
+  - id: udc
+    skrot: Ustawa o dostępności cyfrowej
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2019/848
+  - id: pad
+    skrot: Ustawa o dostępności produktów i usług
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2024/731
+  - id: p_budowlane
+    skrot: Prawo budowlane
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/1994/414
+  - id: k_cywilny
+    skrot: Kodeks cywilny
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/1964/93
+  - id: k_wyborczy
+    skrot: Kodeks wyborczy
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2011/112
+    opis: Zawiera przepisy dotyczące dostępności wyborów.
+  - id: k_morski
+    skrot: Kodeks morski
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2001/1545
+  - id: p_lotnicze
+    skrot: Prawo lotnicze
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2002/1112
+    opis: Prawa pasażerów o ograniczonej możliwości poruszania się, obowiązki przewoźników i lotnisk.
+  - id: p_telekomunikacyjne
+    skrot: Prawo telekomunikacyjne
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2004/1800
+  - id: pke
+    skrot: Prawo komunikacji elektronicznej
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2024/1221
+    opis: Zastąpiło Prawo telekomunikacyjne, w tym przepisy o dostępności usług dla osób z niepełnosprawnościami.
+  - id: rtv
+    skrot: Ustawa o radiofonii i telewizji
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/1993/34
+  - id: pzp
+    skrot: Prawo zamówień publicznych
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2019/2019
+  - id: j_migowy
+    skrot: Ustawa o języku migowym
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2011/1243
+  - id: prawa_konsumenta
+    skrot: Ustawa o prawach konsumenta
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2014/827
+  - id: uslugi_elektroniczne
+    skrot: Ustawa o świadczeniu usług drogą elektroniczną
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2002/1204
+  - id: transport_zbiorowy
+    skrot: Ustawa o publicznym transporcie zbiorowym
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2011/13
+  - id: rehabilitacja
+    skrot: Ustawa o rehabilitacji zawodowej i społecznej
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/1997/776
+    opis: Rehabilitacja i zatrudnianie osób z niepełnosprawnościami, definicja psa asystującego.
+  - id: u_obszarymorskie
+    skrot: Ustawa o obszarach morskich
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/1991/131
+  - id: u_zeglugasrodladowa
+    skrot: Ustawa o żegludze śródlądowej
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2001/43
+  - id: u_transportdrogowy
+    skrot: Ustawa o transporcie drogowym
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2001/1371
+  - id: u_transportkolejowy
+    skrot: Ustawa o transporcie kolejowym
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2003/789
+  - id: u_platnicze
+    skrot: Ustawa o usługach płatniczych
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2011/1175
+  - id: u_alarmowy
+    skrot: Ustawa o systemie powiadamiania ratunkowego
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2013/1635
+  - id: u_reklamacyjny
+    skrot: Ustawa o rozpatrywaniu reklamacji
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2015/1348
+  - id: kredyt
+    skrot: Ustawa o kredycie konsumenckim
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2011/715
+  - id: hipoteczny
+    skrot: Ustawa o kredycie hipotecznym
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2017/819
+  - id: instrumenty
+    skrot: Ustawa o obrocie instrumentami finansowymi
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2005/1538
+  - id: usude
+    skrot: Ustawa o usługach zaufania
+    poziom: ustawy
+    typ: ustawa
+    eli: DU/2016/1579
+
+  # Rozporządzenia
+  - id: w_budynki
+    skrot: Warunki techniczne dla budynków
+    poziom: rozporzadzenia
+    typ: rozporzadzenie
+    eli: DU/2002/690
+    opis: Szczegółowe przepisy o dostępności budynków, w tym miejsca parkingowe.
+    uwagi: >-
+      ELI: uznany za uchylony od 2026-09-21 (art. 66 ustawy o zapewnianiu dostępności:
+      przepisy wykonawcze do Prawa budowlanego zachowały moc najdłużej 84 miesiące).
+      Nowego rozporządzenia w Dzienniku Ustaw nie znaleziono; wymaga wyjaśnienia.
+  - id: w_metro
+    skrot: Warunki techniczne dla metra
+    poziom: rozporzadzenia
+    typ: rozporzadzenie
+    eli: DU/2023/1210
+  - id: w_telekomunikacja
+    skrot: Udogodnienia w usługach telefonicznych
+    poziom: rozporzadzenia
+    typ: rozporzadzenie
+    eli: DU/2014/464
+  - id: w_wybory
+    skrot: Dostępność lokali wyborczych
+    poziom: rozporzadzenia
+    typ: rozporzadzenie
+    eli: DU/2011/938
+  - id: kri
+    skrot: Krajowe Ramy Interoperacyjności
+    poziom: rozporzadzenia
+    typ: rozporzadzenie
+    eli: DU/2024/773
+    opis: Minimalne wymagania dla systemów teleinformatycznych, w tym w zakresie dostępności cyfrowej.
+  - id: kri_2012
+    skrot: Krajowe Ramy Interoperacyjności (2012)
+    poziom: rozporzadzenia
+    typ: rozporzadzenie
+    eli: DU/2012/526
+  - id: warunki_dd
+    skrot: Warunki techniczne deklaracji dostępności
+    poziom: rozporzadzenia
+    typ: dokument_urzedowy
+    tytul: Warunki techniczne publikacji oraz struktura dokumentu elektronicznego deklaracji dostępności
+    opis: Udostępnia minister właściwy do spraw informatyzacji w BIP (art. 12 pkt 7 ustawy o dostępności cyfrowej); to nie jest rozporządzenie.
+
+  # Normy i wytyczne
+  - id: wcag21
+    skrot: WCAG 2.1
+    poziom: normy
+    typ: norma
+    tytul: Wytyczne dla dostępności treści internetowych 2.1
+    url: https://www.w3.org/TR/WCAG21/
+    opis: Załącznik do ustawy o dostępności cyfrowej.
+  - id: en301549
+    skrot: Norma EN 301 549
+    poziom: normy
+    typ: norma
+    tytul: EN 301 549 Wymagania dostępności produktów i usług ICT
+    opis: Ustawa o dostępności cyfrowej przywołuje pkt 9, 10 i 11 wersji V3.2.1:2021.
+  - id: wytyczne_mfipr
+    skrot: Wytyczne MFiPR (standardy dostępności)
+    poziom: normy
+    typ: wytyczne
+    tytul: Wytyczne dotyczące realizacji zasad równościowych w ramach funduszy unijnych na lata 2021–2027
+  - id: wytyczne_pfron
+    skrot: Wytyczne PFRON
+    poziom: normy
+    typ: wytyczne
+    tytul: >-
+      Jak zapewnić dostępność produktów i usług. Wytyczne dla podmiotów gospodarczych
+      w zakresie zapewniania spełniania wymagań dostępności produktów i usług
+  - id: krrit_ad
+    skrot: Rekomendacje KRRiT (audiodeskrypcja)
+    poziom: normy
+    typ: wytyczne
+    tytul: Rekomendacje KRRiT dotyczące audiodeskrypcji (2015)
+  - id: krrit_cc
+    skrot: Rekomendacje KRRiT (napisy)
+    poziom: normy
+    typ: wytyczne
+    tytul: Rekomendacje KRRiT dotyczące napisów dla niesłyszących (2016)
+  - id: krrit_pjm
+    skrot: Stanowisko KRRiT (tłumacz PJM)
+    poziom: normy
+    typ: wytyczne
+    tytul: Stanowisko KRRiT w sprawie tłumaczenia na polski język migowy (2021)
+
+# Relacje: od aktu "z" do aktu "do". Typy: zrodlo, transpozycja, implementacja, delegacja,
+# zmienia, odwolanie, norma, zastapiony_przez.
+relacje:
+  - {z: konstytucja, do: uzd, typ: zrodlo}
+  - {z: konstytucja, do: rtv, typ: zrodlo}
+  - {z: konstytucja, do: p_budowlane, typ: zrodlo}
+  - {z: konstytucja, do: k_cywilny, typ: zrodlo}
+  - {z: konstytucja, do: k_wyborczy, typ: zrodlo}
+  - {z: konstytucja, do: k_morski, typ: zrodlo}
+  - {z: kpon, do: uzd, typ: zrodlo}
+  - {z: karta, do: uzd, typ: zrodlo}
+  - {z: wad, do: udc, typ: transpozycja}
+  - {z: eaa, do: pad, typ: transpozycja}
+  - {z: ue_loty, do: p_lotnicze, typ: implementacja}
+  - {z: udc, do: warunki_dd, typ: delegacja}
+  - {z: udc, do: en301549, typ: norma}
+  - {z: udc, do: wcag21, typ: norma}
+  - {z: udc, do: uslugi_elektroniczne, typ: odwolanie}
+  - {z: udc, do: j_migowy, typ: odwolanie}
+  - {z: uzd, do: udc, typ: odwolanie}
+  - {z: uzd, do: j_migowy, typ: odwolanie}
+  - {z: uzd, do: rehabilitacja, typ: odwolanie}
+  - {z: pad, do: u_obszarymorskie, typ: zmienia}
+  - {z: pad, do: u_zeglugasrodladowa, typ: zmienia}
+  - {z: pad, do: u_transportdrogowy, typ: zmienia}
+  - {z: pad, do: p_lotnicze, typ: zmienia}
+  - {z: pad, do: u_transportkolejowy, typ: zmienia}
+  - {z: pad, do: u_platnicze, typ: zmienia}
+  - {z: pad, do: u_alarmowy, typ: zmienia}
+  - {z: pad, do: u_reklamacyjny, typ: zmienia}
+  - {z: pad, do: uzd, typ: zmienia}
+  - {z: pad, do: kredyt, typ: odwolanie}
+  - {z: pad, do: hipoteczny, typ: odwolanie}
+  - {z: pad, do: instrumenty, typ: odwolanie}
+  - {z: pad, do: u_platnicze, typ: odwolanie}
+  - {z: pad, do: usude, typ: odwolanie}
+  - {z: pad, do: en301549, typ: norma}
+  - {z: pad, do: wytyczne_pfron, typ: delegacja}
+  - {z: eaa, do: en301549, typ: norma}
+  - {z: p_budowlane, do: w_budynki, typ: delegacja}
+  - {z: p_budowlane, do: w_metro, typ: delegacja}
+  - {z: p_telekomunikacyjne, do: w_telekomunikacja, typ: delegacja}
+  - {z: k_wyborczy, do: w_wybory, typ: delegacja}
+  - {z: p_telekomunikacyjne, do: pke, typ: zastapiony_przez}
+  - {z: kri_2012, do: kri, typ: zastapiony_przez}
